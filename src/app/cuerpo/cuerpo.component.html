@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h1>Condicionales</h1>
+      <button type="button" (click)="mostrar=false" class="btn btn-primary">Ocultar</button>
+      <button type="button" (click)="mostrar=true" class="btn btn-danger">Mostrar</button>
+      <button type="button" (click)="mostrar=!mostrar" class="btn btn-warning">Conmutar</button>
+      <div *ngIf="mostrar" class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">TOP SECRET</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Alto Secreto (para los de la logse)</h6>
+          <p class="card-text">La cocacola se usaba como crecepelo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <h1>Iterativos</h1>
+    </div>
+  </div>
+</div>
