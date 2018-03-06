@@ -13,16 +13,24 @@
         </div>
       </div>
       <div class="input-group input-group-sm mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
-        </div>
-        <input type="text" (click)="secret=''"  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+        <input type="text" #cuadro
+          (click)="secret=''"
+          (keyup.enter)="agregar(cuadro.value); cuadro.value=''"
+          class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
       </div>
+      <button type="button"
+        (click)="agregar(cuadro.value); cuadro.value=''"
+        class="btn btn-primary">Añadir</button>
+      <button type="button"
+        (click)="eliminar()"
+        class="btn btn-danger">Eliminar</button>
     </div>
     <div class="col-6">
       <h1>Iterativos</h1>
       <ul>
-        <li *ngFor="let i of elemento">{{i}}</li>
+        <li *ngFor="let i of elemento"
+            (dblclick)='borrar($event)'
+        >{{i}}</li>
       </ul>
     </div>
   </div>
