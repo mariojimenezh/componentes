@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class CuerpoComponent implements OnInit {
 
   mostrar: boolean = true;
+  secret: string = ""
+  elemento : string [] =["Mario", "Carlos", "Antonio"]
   constructor() { }
 
   ngOnInit() {

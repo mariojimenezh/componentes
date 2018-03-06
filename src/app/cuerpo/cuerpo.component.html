@@ -5,16 +5,25 @@
       <button type="button" (click)="mostrar=false" class="btn btn-primary">Ocultar</button>
       <button type="button" (click)="mostrar=true" class="btn btn-danger">Mostrar</button>
       <button type="button" (click)="mostrar=!mostrar" class="btn btn-warning">Conmutar</button>
-      <div *ngIf="mostrar" class="card" style="width: 18rem;">
+      <div *ngIf="mostrar" class="card" >
         <div class="card-body">
           <h5 class="card-title">TOP SECRET</h5>
           <h6 class="card-subtitle mb-2 text-muted">Alto Secreto (para los de la logse)</h6>
-          <p class="card-text">La cocacola se usaba como crecepelo.</p>
+          <p class="card-text">{{secret}}</p>
         </div>
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+        </div>
+        <input type="text" (click)="secret=''"  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
       </div>
     </div>
     <div class="col-6">
       <h1>Iterativos</h1>
+      <ul>
+        <li *ngFor="let i of elemento">{{i}}</li>
+      </ul>
     </div>
   </div>
 </div>
